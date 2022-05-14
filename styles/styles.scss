@@ -1,0 +1,666 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+$primaryText: #333;
+$secondaryText: #666;
+$disabledText: #999;
+
+$offwhiteBg: rgba(238, 238, 238, 0.3);
+
+$blue: #3dadf2;
+$darkBlue: #005696;
+$vdarkBlue: #002147;
+
+$yellow: #fdc800;
+$darkYellow: #f8ca1b;
+
+$linearGradient: linear-gradient(to bottom, #3dadf2, #005696);
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+
+    .logo{
+        img{
+            max-width: 200px;
+        }
+    }
+
+    .right{        
+        ul{
+            display: flex;
+            align-items: center;
+
+            li{
+                padding: 0 1rem;
+            }
+        }
+        .contact{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                max-width: 30px;
+                background: $blue;
+                padding: 0.25rem;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+        }
+
+        a{
+            color: $primaryText;
+
+            &.c_btn{
+                color: #fff;
+                border-radius: 1rem;
+                padding: 0.5rem 0.75rem;
+                background: $linearGradient;
+            }
+        }
+    }
+}
+
+main{
+    padding: 4rem;
+
+    .intro{
+        display: flex;
+        justify-content: space-between;
+        .text{
+            p{
+                color: $disabledText;
+                margin: 1rem 0;
+            }
+
+            a{
+                margin-top: 1.5rem;
+                color: #fff;
+                background: $darkYellow;
+                font-size: 1.2rem;
+                border-radius: 2rem;
+                padding: 0.75rem 2rem;
+                cursor: pointer;
+            }
+        }
+        .landing_image{
+            img{
+                max-width: 900px;
+            }
+        }
+    }
+
+    .more_info{
+        margin-top: 1rem;
+        display: flex;
+        background: $offwhiteBg;
+        border-radius: 1rem;
+        padding: 2rem 4rem;
+
+        .left{
+            flex: 1;
+
+            p{
+                margin: 1rem 0;
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: $secondaryText;
+            }
+        }
+
+        .right{
+            flex: 1.5;
+
+            ul{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+                li{
+                    padding: 2rem;
+                    display: flex;
+
+                    img{
+                        margin-right: 1rem;
+                        height: 40px;
+                        width: 40px;
+                    }
+
+                    &:nth-child(1){
+                        border-right: 1px solid $disabledText;
+                        border-bottom: 1px solid $disabledText;
+                    }
+                    &:nth-child(2){
+                        border-bottom: 1px solid $disabledText;
+                    }
+                    &:nth-child(3){
+                        border-right: 1px solid $disabledText;
+                    }
+                }
+                .ri{
+                    p{
+                        color: $secondaryText;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .top_courses,
+    .ad{
+        margin-top: 4rem;
+        p{
+            color: $disabledText;
+        }
+
+        .tc_banner{
+            margin-top: 2rem;
+            display: flex;
+            background: $offwhiteBg;
+            padding: 4rem;
+            background-image: url("../assets/freepik--Character--inject-62.png");
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-size: contain;
+
+            .right{
+                margin-left: 3.5rem;
+                p{
+                    margin: 1rem 0;
+                    &:nth-child(3){
+                        color: $blue;
+                    }
+                    &:nth-child(4){
+                        color: $primaryText;
+                        font-size: 1.1rem;
+                        font-weight: 700;
+                    }
+                }
+
+                .buttons{
+                    margin-top: 2.5rem;
+                    .btn{
+                        padding: 0.5rem 1.5rem;
+                        border-radius: 5px;
+                    }
+                    .btn1{
+                        background: $yellow;
+                        color: #fff;
+                    }
+                    .btn2{
+                        border: 1px solid $blue;
+                        color: $blue;
+                        display: inline-block;
+                        margin-left: 2rem;
+                    }
+                }
+            }
+        }
+
+        .card{
+            background: #fff;
+            max-width: 250px;
+            box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.2);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+
+            img{
+                max-width: 200px;
+            }
+            .title{
+                color: $primaryText;
+                font-weight: 700;
+            }
+            .category{
+                font-size: 0.9rem;
+                margin: 1.5rem 0;
+            }
+            .bottom{
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.9rem;
+
+                .rating{
+                    background: $vdarkBlue;
+                    color: #fff;
+                    padding: 0.5rem 1.5rem;
+                    border-radius: 1rem;
+                }
+                
+                .ranking{
+                    background: $blue;
+                    color: #fff;
+                    padding: 0.5rem 1.5rem;
+                    border-radius: 1rem;
+                }
+            }
+        }
+    }
+
+    .ad{
+        .tc_banner{
+            background: $darkYellow;
+            flex-direction: row-reverse;
+            background-image: none;
+            border-radius: 1rem;
+            box-shadow: 0px 0px 10px rgba(#000, 0.3);
+
+            .right{
+                
+                p{
+                    &:nth-child(2){
+                        color: $primaryText;
+                    }
+                    &:nth-child(3){
+                        color: #fff;
+                    }
+                }
+                .buttons{
+                    .btn1{
+                        background: $linearGradient;
+                        color: #fff;
+                    }
+                    .btn2{
+                        color: $primaryText;
+                    }
+                }
+            }
+        }
+
+        .card{
+            margin-left: 3.5rem;
+        }
+    }
+
+    .description{
+        margin: 4rem 0;
+        width: 100%;
+        height: 300px;
+        background-image: url("../assets/Component\ 23\ –\ 2.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .suscription{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+
+        .content{
+            display: flex;
+            align-items: center;
+
+            img{
+                margin-right: 2rem;
+            }
+            .form_container{
+                p{
+                    color: $yellow;
+                }
+            }
+
+            .input{
+                position: relative;
+                border: 1px solid $disabledText;
+                border-radius: 5px;
+
+                img{
+                    background: $primaryText;
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    border-radius: 5px;
+                }
+                input{
+                    outline: none;
+                    padding: 0.5rem 1rem;
+                    padding-left: 2.5rem;
+                    border: none;
+                    width: 100%;
+                    min-width: 300px;
+                }
+                button{
+                    position: absolute;
+                    right: 5px;
+                    top: 4px;
+                    outline: none;
+                    border: none;
+                    padding: 0.25rem 1rem;
+                    color: $primaryText;
+                    background: $yellow;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    .form_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        form{
+            margin-top: 2rem;
+
+            .form_row{
+                margin: 0.5rem 0;
+
+                label{
+                    display: inline-block;
+                    width: 150px;
+                }
+                input{
+                    min-width: 200px;
+                    border: none;
+                    outline: none;
+                    border: 1px solid $disabledText;
+                    padding: 0.25rem 0.5rem;
+                    border-radius: 5px;
+                    transition: 0.2s ease;
+
+                    &:focus{
+                        border: 1px solid $yellow;
+                        box-shadow: 0px 0px 3px $yellow;
+                    }
+                }
+            }
+            button{
+                margin-top: 1rem;
+                border: none;
+                outline: none;
+                background: $yellow;
+                color: $primaryText;
+                padding: 0.5rem 1.5rem;
+                border-radius: 1.5rem;
+            }
+        }
+    }
+    
+    .success_msg{
+        background: $yellow;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px rgba($color: #000000, $alpha: 0.2);
+        width: max-content;
+        padding: 2rem;
+    }
+}
+
+.offer{
+    position: relative;
+    top: 2rem;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+
+    div{
+        background: $vdarkBlue;
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 1.5rem;
+        color: #fff;
+        border-radius: 10px;
+
+        .timer{
+            font-size: 0.75rem;
+            .st{
+                display: flex;
+                flex-direction: column;
+            }
+            #hours,
+            #minutes,
+            #days,
+            #seconds{
+                font-size: 2rem;
+            }
+        }
+    }
+
+    img{
+        max-width: 100px;
+    }
+
+    p{
+        span{
+            color: $yellow;
+        }
+        &._left{
+            color: $yellow;
+        }
+    }
+}
+
+footer{
+    .contact{
+        background: $darkBlue;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        padding: 5rem 0;
+
+        address{
+            font-style: normal;
+    
+            h2{
+                color: $yellow;
+            }
+        }
+
+        .row{
+            margin-left: 4rem;
+            display: flex;
+
+            li{
+                text-align: center;
+                
+                &:nth-child(1){
+                    margin-right: 2rem;
+                }
+                .__{
+                    display: flex;
+                    align-items: center;
+                }
+                a{
+                    display: inline-block;
+                    margin-top: 1.5rem;
+                    background: #fff;
+                    padding: 0.5rem 1.5rem;
+                    border-radius: 1.5rem;
+                    color: $primaryText;
+                }
+            }
+        }
+    }
+    .sm_links{
+        background: $yellow;
+        padding: 1rem;
+
+        ul{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            li{
+                margin: 1rem 2.5rem;
+                img{
+                    max-width: 35px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    nav{
+        flex-direction: column;
+
+        .right{
+            ul{
+                flex-direction: column;
+                align-items: flex-start;
+
+                li{
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+
+    main{
+        padding: 1rem;
+        .intro{
+            flex-direction: column-reverse;
+
+            .text{
+                margin-top: 3rem;
+            }
+            .landing_image{
+                img{
+                    max-width: calc(100vw - 4rem);
+                }
+            }
+        }
+
+        .more_info{
+            flex-direction: column;
+            margin-top: 2rem;
+
+            .right{
+                ul{
+                    display: block;
+
+                    li{
+                        
+                        &:nth-child(1),
+                        &:nth-child(2),
+                        &:nth-child(3){
+                            border: none;
+                        }
+                        &:not(:last-child){
+                            border-bottom: 1px solid $disabledText;
+                        }
+                    }
+                }
+            }
+        }
+
+        .top_courses,
+        .ad{
+
+            .tc_banner{
+                flex-direction: column;
+                align-items: center;
+                padding: 3rem 2rem;
+                background-size: 120px 300px;
+
+                .right{
+                    margin-left: 0;
+                    margin-top: 2rem;
+
+                    .buttons{
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+
+                        .btn1,
+                        .btn2{
+                            width: 170px;
+                        }
+                        .btn2{
+                            margin-left: 0;
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ad{
+            .tc_banner{
+                flex-direction: column-reverse;
+
+                .right{
+                    margin-top: 0;
+                }
+                .card{
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+        .description{
+            background-image: url("../assets/Group\ 7004.png");
+            background-size: contain;
+            height: 1550px;
+        }
+
+        .suscription{
+            .content{
+                flex-direction: column-reverse;
+
+                img{
+                    margin-top: 2rem;
+                }
+                .input{
+                    margin: 1rem 0;
+
+                    img{
+                        top: -27px;
+                    }
+                }
+            }
+        }
+
+    }
+    .offer{
+        div{
+            flex-direction: column;
+            padding: 0.75rem;
+
+            .timer{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+    footer{
+        .contact{
+            flex-direction: column;
+            padding: 5rem 1rem;
+
+            .row{
+                flex-direction: column;
+                margin-left: 0;
+                margin-top: 1rem;
+
+                li{
+                    text-align: left;
+                    margin-top: 1rem;
+                    a{
+                        margin-top: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
